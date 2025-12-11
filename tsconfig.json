@@ -23,7 +23,8 @@
       "@routes/*": ["routes/*"],
       "@services/*": ["services/*"],
       "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"],
+      "@custom-types": ["types/index"],
+      "@custom-types/*": ["types/*"],
       "@swagger/*": ["swagger/*"]
     },
     "resolveJsonModule": true,
