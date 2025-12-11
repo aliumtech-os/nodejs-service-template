@@ -34,6 +34,7 @@
     "@types/jest": "^30.0.0",
     "@types/morgan": "^1.9.10",
     "@types/node": "^25.0.0",
+    "@types/pg": "^8.16.0",
     "@types/supertest": "^6.0.3",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
@@ -42,5 +43,14 @@
     "tsc-alias": "^1.8.16",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "config": "^4.1.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "joi": "^18.0.2",
+    "node-cache": "^5.1.2",
+    "pg": "^8.16.3"
   }
 }
