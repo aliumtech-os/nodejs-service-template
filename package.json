@@ -1,0 +1,21 @@
+{
+  "name": "service-template",
+  "version": "0.0.1",
+  "description": "A node js service template serving as the starter kit to reduce development time to startup any project and keep the structure same throughout our services.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliumtech-os/nodejs-service-template.git"
+  },
+  "keywords": ["node", "express", "starter-kit"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aliumtech-os/nodejs-service-template/issues"
+  },
+  "homepage": "https://github.com/aliumtech-os/nodejs-service-template#readme"
+}
