@@ -1,0 +1,44 @@
+// config/staging.js
+
+module.exports = {
+  server: {
+    port: parseInt(process.env.PORT || '3000', 10),
+    host: process.env.HOST || '0.0.0.0',
+    env: 'staging'
+  },
+  database: {
+    host: process.env.DB_HOST || 'localhost',
+    port: parseInt(process.env.DB_PORT || '5432', 10),
+    database: process.env.DB_NAME || 'myapp_staging',
+    user: process.env.DB_USER || 'postgres',
+    password: process.env.DB_PASSWORD,
+    max: parseInt(process.env.DB_MAX_POOL || '30', 10),
+    idleTimeoutMillis: parseInt(process.env.DB_IDLE_TIMEOUT || '30000', 10),
+    connectionTimeoutMillis: 2000,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  },
+  cache: {
+    ttl: parseInt(process.env.CACHE_TTL || '450', 10),
+    checkPeriod: parseInt(process.env.CACHE_CHECK_PERIOD || '470', 10)
+  },
+  logging: {
+    level: process.env.LOG_LEVEL || 'info',
+    format: 'json', // Structured logging for staging
+    directory: process.env.LOG_DIR || 'logs',
+    maxSize: '30m', // 30MB per log file
+    maxFiles: '21d', // Keep logs for 21 days
+    enableConsole: process.env.ENABLE_CONSOLE_LOGS === 'true' // Console logs can be enabled for debugging
+  },
+  security: {
+    rateLimit: {
+      windowMs: 15 * 60 * 1000,
+      max: 75
+    },
+    cors: {
+      origin: process.env.CORS_ORIGIN || 'https://staging.yourdomain.com',
+      credentials: true
+    }
+  }
+};
