@@ -24,8 +24,9 @@ module.exports = {
     level: process.env.LOG_LEVEL || 'debug',
     format: 'pretty',
     directory: process.env.LOG_DIR || 'logs',
-    maxSize: '20m',
-    maxFiles: '14d'
+    maxSize: '20m', // 20MB per log file
+    maxFiles: '14d', // Keep logs for 14 days
+    enableConsole: true // Always show console logs in development
   },
   security: {
     rateLimit: {

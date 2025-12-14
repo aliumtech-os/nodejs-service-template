@@ -25,10 +25,11 @@ module.exports = {
   },
   logging: {
     level: process.env.LOG_LEVEL || 'info',
-    format: 'json',
+    format: 'json', // Structured logging for staging
     directory: process.env.LOG_DIR || 'logs',
-    maxSize: '30m',
-    maxFiles: '21d'
+    maxSize: '30m', // 30MB per log file
+    maxFiles: '21d', // Keep logs for 21 days
+    enableConsole: process.env.ENABLE_CONSOLE_LOGS === 'true' // Console logs can be enabled for debugging
   },
   security: {
     rateLimit: {

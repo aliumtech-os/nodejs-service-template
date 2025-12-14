@@ -22,11 +22,12 @@ module.exports = {
     checkPeriod: parseInt(process.env.CACHE_CHECK_PERIOD || '620', 10)
   },
   logging: {
-    level: process.env.LOG_LEVEL || 'error',
-    format: 'json',
+    level: process.env.LOG_LEVEL || 'info',
+    format: 'json', // Structured logging for production
     directory: process.env.LOG_DIR || 'logs',
-    maxSize: '50m',
-    maxFiles: '30d'
+    maxSize: '50m', // 50MB per log file
+    maxFiles: '30d', // Keep logs for 30 days
+    enableConsole: process.env.ENABLE_CONSOLE_LOGS === 'true' // Console logs disabled by default in production
   },
   security: {
     rateLimit: {
